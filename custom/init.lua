@@ -7,9 +7,9 @@ opt.confirm = true
 opt.relativenumber = true
 opt.scrolloff = 10
 -- tabs & indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
+-- opt.tabstop = 4
+-- opt.shiftwidth = 4
+-- opt.expandtab = true
 -- opt.autoindent = true
 
 -- line wrapping
@@ -28,10 +28,10 @@ opt.termguicolors = true
 opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append "unnamedplus"
+opt.clipboard:append("unnamedplus")
 
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
 
-opt.iskeyword:append "-"
+opt.iskeyword:append("-")
