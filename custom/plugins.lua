@@ -15,6 +15,13 @@ local plugins = {
 		end,
 	},
 	{
+		"windwp/nvim-ts-autotag",
+		ft = { "typescriptreact", "html", "javascriptreact" },
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+	{
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup({
