@@ -1,10 +1,7 @@
 local opt = vim.opt -- for conciseness
 vim.keymap.set("n", "U", "<C-r>") --Redo
 
-opt.undofile = true
 opt.confirm = true
--- line numbers
-opt.relativenumber = true
 opt.scrolloff = 10
 -- tabs & indentation
 -- opt.tabstop = 4
@@ -13,10 +10,10 @@ opt.scrolloff = 10
 -- opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false
+-- opt.wrap = false
 
 -- search settins
--- opt.incsearch = true
+opt.incsearch = true
 opt.hlsearch = false
 -- cursor line
 opt.cursorline = true
@@ -29,9 +26,5 @@ opt.backspace = "indent,eol,start"
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
-
--- split windows
-opt.splitright = true
-opt.splitbelow = true
 
 opt.iskeyword:append("-")
