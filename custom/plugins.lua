@@ -25,7 +25,8 @@ local plugins = {
 		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup({
-				-- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+				--To allow for context aware commenting in i.e tsx files where comments may have to be surrounded with braces in the tsx code
+				pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
 			})
 		end,
 	},
@@ -42,9 +43,15 @@ local plugins = {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		lazy = false,
+		lazy = false, --otherwise previews will not have treesitter on first launch
+		dependencies = {
+			"JoosepAlviste/nvim-ts-context-commentstring",
+		},
 		opts = {
 			auto_install = true,
+		},
+		context_commentstring = {
+			enable = true,
 		},
 	},
 	{
