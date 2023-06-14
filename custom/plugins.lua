@@ -43,7 +43,6 @@ local plugins = {
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
-		lazy = false, --otherwise previews will not have treesitter on first launch
 		dependencies = {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
