@@ -7,6 +7,7 @@ local masonServers = {
 }
 
 local plugins = {
+	{ "folke/which-key.nvim", enabled = false },
 	{
 		"kylechui/nvim-surround",
 		event = "VeryLazy",

@@ -3,7 +3,12 @@ local M = {}
 M.disabled = {
 	n = {
 		["<A-i>"] = "",
-		["gr"] = "",
+		-- ["gr"] = "",
+		["gi"] = "",
+	},
+	i = {
+
+		["jk"] = "",
 	},
 }
 M.custom = {
@@ -30,7 +35,14 @@ M.custom = {
 			"<cmd>:UndotreeToggle<CR>",
 			"Toggle undo tree",
 		},
-		["˛"] = {
+		["<leader>fd"] = {
+			function()
+				vim.diagnostic.open_float({ border = "rounded" })
+			end,
+			"Floating diagnostic",
+		},
+
+		["†"] = {
 			function()
 				require("nvterm.terminal").toggle("horizontal")
 			end,
@@ -46,7 +58,10 @@ M.custom = {
 	},
 
 	i = {
-		["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
+		["jkl"] = {
+			"()=>{}<esc>i",
+			"arrow function",
+		},
 	},
 
 	v = {
@@ -56,7 +71,7 @@ M.custom = {
 
 	t = {
 
-		["˛"] = {
+		["†"] = {
 			function()
 				require("nvterm.terminal").toggle("horizontal")
 			end,
@@ -68,6 +83,31 @@ M.custom = {
 				require("nvterm.terminal").toggle("vertical")
 			end,
 			"Toggle vertical term",
+		},
+	},
+}
+
+M.tabufline = {
+	n = {
+
+		["öd"] = {
+			function()
+				vim.diagnostic.goto_next({ float = { border = "rounded" } })
+			end,
+			"Goto next",
+		},
+		["<leader>l"] = {
+			function()
+				require("nvchad_ui.tabufline").tabuflineNext()
+			end,
+			"Goto next buffer",
+		},
+
+		["<leader>L"] = {
+			function()
+				require("nvchad_ui.tabufline").tabuflinePrev()
+			end,
+			"Goto prev buffer",
 		},
 	},
 }

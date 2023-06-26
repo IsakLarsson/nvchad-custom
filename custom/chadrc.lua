@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-	theme = "kanagawa",
+	theme = "decay",
 	telescope = { style = "bordered" },
 	nvdash = {
 		load_on_startup = true,
@@ -17,8 +17,7 @@ M.ui = {
 		theme = "vscode_colored",
 	},
 	cmp = {
-		selected_item_bg = "simple",
-		border_color = "dark_purple",
+		selected_item_bg = "colored",
 	},
 }
 M.plugins = "custom.plugins"

@@ -3,6 +3,7 @@ vim.keymap.set("n", "U", "<C-r>") --Redo
 
 opt.confirm = true
 opt.scrolloff = 10
+opt.relativenumber = true
 -- tabs & indentation
 -- opt.tabstop = 4
 -- opt.shiftwidth = 4
