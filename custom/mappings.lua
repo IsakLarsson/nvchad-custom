@@ -96,14 +96,14 @@ M.tabufline = {
 			end,
 			"Goto next",
 		},
-		["<leader>l"] = {
+		["<leader>k"] = {
 			function()
 				require("nvchad_ui.tabufline").tabuflineNext()
 			end,
 			"Goto next buffer",
 		},
 
-		["<leader>L"] = {
+		["<leader>j"] = {
 			function()
 				require("nvchad_ui.tabufline").tabuflinePrev()
 			end,
