@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-	theme = "decay",
+	theme = "catppuccin",
 	telescope = { style = "bordered" },
 	nvdash = {
 		load_on_startup = true,
@@ -22,4 +22,5 @@ M.ui = {
 }
 M.plugins = "custom.plugins"
 M.mappings = require("custom.mappings")
+
 return M

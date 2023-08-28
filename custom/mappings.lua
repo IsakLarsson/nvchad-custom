@@ -86,7 +86,6 @@ M.custom = {
 		},
 	},
 }
-
 M.tabufline = {
 	n = {
 
@@ -98,14 +97,14 @@ M.tabufline = {
 		},
 		["<leader>k"] = {
 			function()
-				require("nvchad_ui.tabufline").tabuflineNext()
+				require("nvchad.tabufline").tabuflineNext()
 			end,
 			"Goto next buffer",
 		},
 
 		["<leader>j"] = {
 			function()
-				require("nvchad_ui.tabufline").tabuflinePrev()
+				require("nvchad.tabufline").tabuflinePrev()
 			end,
 			"Goto prev buffer",
 		},
