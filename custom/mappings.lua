@@ -13,6 +13,14 @@ M.disabled = {
 }
 M.custom = {
 	n = {
+		["Ä"] = {
+			",",
+			"Goto previous find character",
+		},
+		["ä"] = {
+			";",
+			"Goto next find character",
+		},
 		["<leader>;"] = {
 			function()
 				require("nvterm.terminal").toggle("float")
@@ -86,7 +94,7 @@ M.custom = {
 		},
 	},
 }
-M.tabufline = {
+M.diagnostics = {
 	n = {
 
 		["öd"] = {
@@ -94,19 +102,6 @@ M.tabufline = {
 				vim.diagnostic.goto_next({ float = { border = "rounded" } })
 			end,
 			"Goto next",
-		},
-		["<leader>k"] = {
-			function()
-				require("nvchad.tabufline").tabuflineNext()
-			end,
-			"Goto next buffer",
-		},
-
-		["<leader>j"] = {
-			function()
-				require("nvchad.tabufline").tabuflinePrev()
-			end,
-			"Goto prev buffer",
 		},
 	},
 }
