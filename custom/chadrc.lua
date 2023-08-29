@@ -23,4 +23,10 @@ M.ui = {
 M.plugins = "custom.plugins"
 M.mappings = require("custom.mappings")
 
+--For changing tabs
+for i = 1, 9, 1 do
+  vim.keymap.set("n", string.format("<leader>%s", i), function()
+    vim.api.nvim_set_current_buf(vim.t.bufs[i])
+  end)
+end
 return M
