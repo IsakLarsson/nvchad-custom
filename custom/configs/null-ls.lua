@@ -9,6 +9,7 @@ local sources = {
   formatting.stylua,
   formatting.gofmt,
   formatting.rustfmt,
+  formatting.elm_format,
   diagnostics.eslint,
   code_actions.eslint,
 }
