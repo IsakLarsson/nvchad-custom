@@ -2,7 +2,7 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "rust_analyzer", "tsserver", "tailwindcss", "pyright", "cssls" }
+local servers = { "rust_analyzer", "tsserver", "tailwindcss", "pyright", "cssls" ,"elmls"}
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -11,11 +11,11 @@ for _, lsp in ipairs(servers) do
 	})
 end
 
-local custom_attach = function(client)
+--[[ local custom_attach = function(client)
   if client.config.flags then
     client.config.flags.allow_incremental_sync = true
   end
 end
 lspconfig.elmls.setup({
    on_attach = custom_attach;
-})
+}) ]]
