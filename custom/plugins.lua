@@ -7,6 +7,23 @@ local masonServers = {
 }
 
 local plugins = {
+	{
+		"NvChad/nvterm",
+		config = function()
+			require("nvterm").setup({
+				terminals = {
+					type_opts = {
+						float = {
+							row = 0.05,
+							col = 0.1,
+							width = 0.8,
+							height = 0.8,
+						},
+					},
+				},
+			})
+		end,
+	},
 	{ "folke/which-key.nvim", enabled = false },
 	{
 		"kylechui/nvim-surround",

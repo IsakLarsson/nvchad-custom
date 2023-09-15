@@ -27,6 +27,12 @@ M.custom = {
 			end,
 			"Open floating terminal",
 		},
+		["<leader>gg"] = {
+			function()
+				require("nvterm.terminal").send("lazygit", "float") -- the 2nd argument i.e direction is optional
+			end,
+			"Open floating terminal",
+		},
 		["<leader>q"] = {
 			"<cmd>:q<cr>",
 			"Close current buffer",
