@@ -35,7 +35,7 @@ M.custom = {
 		},
 		["<leader>q"] = {
 			"<cmd>:q<cr>",
-			"Close current buffer",
+			"Close current window",
 		},
 		["<leader>Q"] = {
 			"<cmd>:qa<cr>",
