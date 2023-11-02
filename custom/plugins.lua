@@ -80,7 +80,7 @@ local plugins = {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		opts = {},
+		opts = { modes = { search = { enabled = false } } },
 		keys = {
 			{
 				"s",
@@ -115,7 +115,7 @@ local plugins = {
 				desc = "Treesitter Search",
 			},
 			{
-				"<c-s>",
+				"<c-t>",
 				mode = { "c" },
 				function()
 					require("flash").toggle()
