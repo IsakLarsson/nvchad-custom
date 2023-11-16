@@ -21,6 +21,18 @@ M.custom = {
 			";",
 			"Goto next find character",
 		},
+		["gr"] = {
+			"<cmd>Telescope lsp_references<cr>",
+			"Show all lsp references in telescope",
+		},
+		["-"] = {
+			"<cmd>Oil<cr>",
+			"Open Oil",
+		},
+		["<leader>ft"] = {
+			"<cmd>:Telescope file_browser<cr>",
+			"Open Telescope file browser",
+		},
 		["<leader>;"] = {
 			function()
 				require("nvterm.terminal").toggle("float")

@@ -24,6 +24,25 @@ local plugins = {
 			})
 		end,
 	},
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+	},
+
+	-- {
+	-- 	"nvim-telescope/telescope.nvim",
+	-- 	dependencies = {
+	-- 		{ "nvim-lua/plenary.nvim", "nvim-telescope/telescope-github.nvim" },
+	-- 	},
+	-- },
+	-- {
+	-- 	"stevearc/oil.nvim",
+	-- 	opts = {},
+	-- 	-- Optional dependencies
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- 	-- config = require("oil").setup(),
+	-- 	lazy = false,
+	-- },
 	{ "folke/which-key.nvim", enabled = false },
 	{
 		"kylechui/nvim-surround",
