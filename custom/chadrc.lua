@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-	theme = "kanagawa",
+	theme = "doomchad",
 	telescope = { style = "bordered" },
 	nvdash = {
 		load_on_startup = true,
@@ -25,8 +25,8 @@ M.mappings = require("custom.mappings")
 
 --For changing tabs
 for i = 1, 9, 1 do
-  vim.keymap.set("n", string.format("<leader>%s", i), function()
-    vim.api.nvim_set_current_buf(vim.t.bufs[i])
-  end)
+	vim.keymap.set("n", string.format("<A-%s>", i), function()
+		vim.api.nvim_set_current_buf(vim.t.bufs[i])
+	end)
 end
 return M
