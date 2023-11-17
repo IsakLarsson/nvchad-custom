@@ -99,7 +99,12 @@ local plugins = {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		opts = { modes = { search = { enabled = false } } },
+		opts = {
+			modes = { search = { enabled = false }, char = { multi_line = false, highlight = { backdrop = false } } },
+			highlight = {
+				backdrop = false,
+			},
+		},
 		keys = {
 			{
 				"s",
