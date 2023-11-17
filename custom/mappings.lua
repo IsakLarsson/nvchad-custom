@@ -21,17 +21,9 @@ M.custom = {
 			";",
 			"Goto next find character",
 		},
-		["gr"] = {
-			"<cmd>Telescope lsp_references<cr>",
-			"Show all lsp references in telescope",
-		},
 		["-"] = {
 			"<cmd>Oil<cr>",
 			"Open Oil",
-		},
-		["<leader>ft"] = {
-			"<cmd>:Telescope file_browser<cr>",
-			"Open Telescope file browser",
 		},
 		["<leader>;"] = {
 			function()
@@ -113,6 +105,22 @@ M.custom = {
 				require("nvterm.terminal").toggle("vertical")
 			end,
 			"Toggle vertical term",
+		},
+	},
+}
+M.telescope = {
+	n = {
+		["gr"] = {
+			"<cmd>Telescope lsp_references theme=cursor<cr>",
+			"Show all lsp references in telescope",
+		},
+		["<leader>ft"] = {
+			"<cmd>:Telescope file_browser<cr>",
+			"Open Telescope file browser",
+		},
+		["<leader>fr"] = {
+			"<cmd>:Telescope resume<cr>",
+			"Resume last Telescope search",
 		},
 	},
 }
