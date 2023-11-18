@@ -2,15 +2,13 @@
 local M = {}
 M.ui = {
 	theme = "pastelDark",
-	telescope = { style = "bordered" },
+	telescope = { style = "borderless" },
 	nvdash = {
-		load_on_startup = true,
+		-- load_on_startup = true,
 		header = {
-			[[                               _           ]],
-			[[   ____   ___   ____  _   _   (_) ____ ___ ]],
-			[[  / __ \ / _ \ / __ \| | / / / / / __ `__ \]],
-			[[ / / / //  __// /_/ /| |/ / / / / / / / / /]],
-			[[/_/ /_/ \___/ \____/ |___/ /_/ /_/ /_/ /_/ ]],
+			[[   ┌┐┌┬─┐┌─┐┬  ┬┬┌┬┐   ]],
+			[[   │││├┤ │ │└┐┌┘││││   ]],
+			[[   ┘└┘└─┘└─┘ └┘ ┴┴ ┴   ]],
 		},
 	},
 	statusline = {
@@ -29,4 +27,5 @@ for i = 1, 9, 1 do
 		vim.api.nvim_set_current_buf(vim.t.bufs[i])
 	end)
 end
+
 return M
