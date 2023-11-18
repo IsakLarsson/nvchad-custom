@@ -42,7 +42,16 @@ local plugins = {
 	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	-- 	-- config = require("oil").setup(),
 	-- 	lazy = false,
-	-- },
+	{
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		event = {
+			"BufEnter",
+		},
+	},
 	{ "folke/which-key.nvim", enabled = false },
 	{
 		"kylechui/nvim-surround",

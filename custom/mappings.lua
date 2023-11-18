@@ -11,6 +11,14 @@ M.disabled = {
 		["jk"] = "",
 	},
 }
+M.git = {
+	n = {
+		["<leader>gg"] = {
+			"<cmd>LazyGit<cr>",
+			"Open Lazygit",
+		},
+	},
+}
 M.custom = {
 	n = {
 		["Ä"] = {
@@ -28,12 +36,6 @@ M.custom = {
 		["<leader>;"] = {
 			function()
 				require("nvterm.terminal").toggle("float")
-			end,
-			"Open floating terminal",
-		},
-		["<leader>gg"] = {
-			function()
-				require("nvterm.terminal").send("lazygit", "float") -- the 2nd argument i.e direction is optional
 			end,
 			"Open floating terminal",
 		},
