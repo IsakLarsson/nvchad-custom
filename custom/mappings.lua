@@ -117,7 +117,7 @@ M.telescope = {
 			"Show all lsp references in telescope",
 		},
 		["<leader>ft"] = {
-			"<cmd>:Telescope file_browser<cr>",
+			"<cmd>:Telescope file_browser initial_mode=normal<cr>",
 			"Open Telescope file browser",
 		},
 		["<leader>fr"] = {
