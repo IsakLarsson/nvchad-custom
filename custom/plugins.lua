@@ -28,20 +28,27 @@ local plugins = {
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	},
+	{
+		"windwp/nvim-autopairs",
+		opts = {
+			fast_wrap = {},
+			disable_filetype = { "TelescopePrompt", "vim" },
+		},
+		config = function(_, opts)
+			require("nvim-autopairs").setup(opts)
 
-	-- {
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	dependencies = {
-	-- 		{ "nvim-lua/plenary.nvim", "nvim-telescope/telescope-github.nvim" },
-	-- 	},
-	-- },
-	-- {
-	-- 	"stevearc/oil.nvim",
-	-- 	opts = {},
-	-- 	-- Optional dependencies
-	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	-- 	-- config = require("oil").setup(),
-	-- 	lazy = false,
+			-- setup cmp for autopairs
+			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+			require("cmp").event:on(
+				"confirm_done",
+				cmp_autopairs.on_confirm_done({
+					filetypes = {
+						elm = false,
+					},
+				})
+			)
+		end,
+	},
 	{
 		"kdheepak/lazygit.nvim",
 		-- optional for floating window border decoration
