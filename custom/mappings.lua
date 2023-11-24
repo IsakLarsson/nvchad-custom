@@ -29,10 +29,6 @@ M.custom = {
 			";",
 			"Goto next find character",
 		},
-		["-"] = {
-			"<cmd>Oil<cr>",
-			"Open Oil",
-		},
 		["<leader>;"] = {
 			function()
 				require("nvterm.terminal").toggle("float")
