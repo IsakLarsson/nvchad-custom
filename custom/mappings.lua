@@ -21,6 +21,10 @@ M.git = {
 }
 M.custom = {
 	n = {
+		["x"] = {
+			'"_x"',
+			"Delete character into black hole register",
+		},
 		["Ä"] = {
 			",",
 			"Goto previous find character",
