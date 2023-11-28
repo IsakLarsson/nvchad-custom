@@ -21,6 +21,14 @@ M.git = {
 }
 M.custom = {
 	n = {
+		["<C-u>"] = {
+			"<C-u>zz",
+			"Keep code centered when scrolling halfpages",
+		},
+		["<C-d>"] = {
+			"<C-d>zz",
+			"Keep code centered when scrolling halfpages",
+		},
 		["x"] = {
 			'"_x"',
 			"Delete character into black hole register",
