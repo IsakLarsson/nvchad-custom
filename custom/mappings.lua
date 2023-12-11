@@ -63,26 +63,6 @@ M.custom = {
 			"<cmd>:UndotreeToggle<CR>",
 			"Toggle undo tree",
 		},
-		["<leader>fd"] = {
-			function()
-				vim.diagnostic.open_float({ border = "rounded" })
-			end,
-			"Floating diagnostic",
-		},
-
-		["†"] = {
-			function()
-				require("nvterm.terminal").toggle("horizontal")
-			end,
-			"Toggle horizontal term",
-		},
-
-		["‹"] = {
-			function()
-				require("nvterm.terminal").toggle("vertical")
-			end,
-			"Toggle vertical term",
-		},
 	},
 
 	i = {
@@ -121,7 +101,7 @@ M.custom = {
 M.telescope = {
 	n = {
 		["gr"] = {
-			"<cmd>Telescope lsp_references theme=cursor<cr>",
+			"<cmd>Telescope lsp_references theme=ivy<cr>",
 			"Show all lsp references in telescope",
 		},
 		["<leader>ft"] = {
@@ -145,7 +125,14 @@ M.tmux = {
 M.diagnostics = {
 	n = {
 
-		["öd"] = {
+		["<leader>fd"] = {
+			function()
+				vim.diagnostic.open_float({ border = "rounded" })
+			end,
+			"Floating diagnostic",
+		},
+
+		["]d"] = {
 			function()
 				vim.diagnostic.goto_next({ float = { border = "rounded" } })
 			end,
