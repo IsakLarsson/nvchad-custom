@@ -2,7 +2,7 @@
 local M = {}
 M.ui = {
 	theme = "rosepine",
-	telescope = { style = "borderless" },
+	telescope = { style = "bordered" },
 	nvdash = {
 		-- load_on_startup = true,
 		header = {
