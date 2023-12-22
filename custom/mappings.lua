@@ -25,6 +25,10 @@ M.custom = {
 			"<C-u>zz",
 			"Keep code centered when scrolling halfpages",
 		},
+		["<leader>s"] = {
+			"<cmd>vs<cr>",
+			"Vertical split",
+		},
 		["<C-d>"] = {
 			"<C-d>zz",
 			"Keep code centered when scrolling halfpages",
