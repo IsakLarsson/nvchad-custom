@@ -74,10 +74,6 @@ M.custom = {
 			"()=>{}<esc>i",
 			"arrow function",
 		},
-		["ä"] = {
-			"->",
-			"arrow",
-		},
 	},
 
 	v = {
