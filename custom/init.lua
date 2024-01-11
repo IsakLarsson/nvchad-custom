@@ -37,4 +37,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
-vim.api.nvim_command("command ReloadApp :!tmux send-keys -t app:2 'r'")
+vim.api.nvim_command("command ReloadApp :silent !tmux send-keys -t app:2 'r'")
