@@ -29,6 +29,10 @@ M.custom = {
 			"<cmd>vs<cr>",
 			"Vertical split",
 		},
+		["<leader>rr"] = {
+			"<cmd>ReloadApp<cr>",
+			"Reload mobile app in other tmux session",
+		},
 		["<C-d>"] = {
 			"<C-d>zz",
 			"Keep code centered when scrolling halfpages",
