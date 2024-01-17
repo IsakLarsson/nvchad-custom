@@ -38,3 +38,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 vim.api.nvim_command("command ReloadApp :silent !tmux send-keys -t app:2 'r'")
+local api = vim.api
+local group = api.nvim_create_augroup("internal.autocmd", {})
+
+api.nvim_create_autocmd("BufEnter", {
+	pattern = ".env**",
+	group = group,
+	callback = function(args)
+		vim.diagnostic.disable(args.buf)
+	end,
+})
+
