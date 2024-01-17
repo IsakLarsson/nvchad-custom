@@ -61,7 +61,11 @@ M.custom = {
 		},
 		["<leader>Q"] = {
 			"<cmd>:qa<cr>",
-			"Close all buffers",
+			"Close all windows",
+		},
+		["<leader>kk"] = {
+			"<cmd>CloseOtherBuffers<cr>",
+			"Close all buffers except current open one",
 		},
 		["Q"] = {
 			"@q",
