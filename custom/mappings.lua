@@ -146,6 +146,10 @@ M.diagnostics = {
 			end,
 			"Goto next",
 		},
+		["<leader>da"] = {
+			"<cmd>SearchErrorDiagnostics<cr>",
+			"Telescope errors",
+		},
 	},
 }
 
