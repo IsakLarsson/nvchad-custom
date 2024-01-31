@@ -17,6 +17,14 @@ M.git = {
 			"<cmd>LazyGit<cr>",
 			"Open Lazygit",
 		},
+		["<leader>gc"] = {
+			":!git commit -m ",
+			"git commit",
+		},
+		["<leader>gaa"] = {
+			"<cmd> !git add . <cr>",
+			"git add all",
+		},
 	},
 }
 M.custom = {
