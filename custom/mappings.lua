@@ -25,6 +25,10 @@ M.git = {
 			"<cmd>silent !git add . <cr>",
 			"Git add all",
 		},
+		["<leader>gp"] = {
+			"<cmd>git push<cr>",
+			"Git push",
+		},
 	},
 }
 M.custom = {
