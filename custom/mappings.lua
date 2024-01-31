@@ -26,7 +26,7 @@ M.git = {
 			"Git add all",
 		},
 		["<leader>gp"] = {
-			"<cmd>git push<cr>",
+			"<cmd>!git push<cr>",
 			"Git push",
 		},
 	},
