@@ -19,11 +19,11 @@ M.git = {
 		},
 		["<leader>gc"] = {
 			":!git commit -m ",
-			"git commit",
+			"Git commit",
 		},
 		["<leader>gaa"] = {
-			"<cmd> !git add . <cr>",
-			"git add all",
+			"<cmd>silent !git add . <cr>",
+			"Git add all",
 		},
 	},
 }
