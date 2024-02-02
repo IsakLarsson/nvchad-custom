@@ -41,6 +41,10 @@ M.custom = {
 			"<cmd>vs<cr>",
 			"Vertical split",
 		},
+		["<leader>ib"] = {
+			"<cmd>InvertBoolean<cr>",
+			"Invert boolean value",
+		},
 		["<leader>rr"] = {
 			"<cmd>ReloadApp<cr>",
 			"Reload mobile app in other tmux session",
@@ -86,6 +90,10 @@ M.custom = {
 		["<leader>u"] = {
 			"<cmd>:UndotreeToggle<CR>",
 			"Toggle undo tree",
+		},
+		["<leader>rs"] = {
+			"<cmd>:LspRestart<CR>",
+			"Lsp Restart",
 		},
 	},
 
