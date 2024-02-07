@@ -41,7 +41,7 @@ M.custom = {
 			"<cmd>vs<cr>",
 			"Vertical split",
 		},
-		["<leader>ib"] = {
+		["-"] = {
 			"<cmd>InvertBoolean<cr>",
 			"Invert boolean value",
 		},
