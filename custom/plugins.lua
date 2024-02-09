@@ -25,6 +25,9 @@ local plugins = {
 		end,
 	},
 	{
+		"ThePrimeagen/harpoon",
+	},
+	{
 		"sindrets/diffview.nvim",
 		event = "VeryLazy",
 	},

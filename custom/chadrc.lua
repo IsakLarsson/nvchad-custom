@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-	theme = "penumbra_dark",
+	theme = "everforest",
 	telescope = { style = "bordered" },
 	nvdash = {
 		-- load_on_startup = true,
@@ -16,6 +16,9 @@ M.ui = {
 	},
 	cmp = {
 		selected_item_bg = "colored",
+	},
+	tabufline = {
+		enabled = false,
 	},
 }
 M.plugins = "custom.plugins"
