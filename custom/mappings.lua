@@ -130,7 +130,7 @@ M.custom = {
 }
 M.telescope = {
 	n = {
-		["gr"] = {
+		["gf"] = {
 			"<cmd>Telescope lsp_references theme=ivy<cr>",
 			"Show all lsp references in telescope",
 		},
