@@ -174,45 +174,5 @@ M.diagnostics = {
 		},
 	},
 }
-M.Harpoon = {
-	n = {
-		["<leader>hh"] = {
-			function()
-				require("harpoon.mark").add_file()
-			end,
-			"Add to harpoon list",
-		},
-		["<leader>m"] = {
-			function()
-				require("harpoon.ui").toggle_quick_menu()
-			end,
-			"Show Harpoon menu",
-		},
-		["<leader>ht"] = {
-			function()
-				require("harpoon.ui").nav_file(1)
-			end,
-			"Nav to file 1",
-		},
-		["<leader>hs"] = {
-			function()
-				require("harpoon.ui").nav_file(2)
-			end,
-			"Nav to file 2",
-		},
-		["<leader>hr"] = {
-			function()
-				require("harpoon.ui").nav_file(3)
-			end,
-			"Nav to file 3",
-		},
-		["<leader>ha"] = {
-			function()
-				require("harpoon.ui").nav_file(4)
-			end,
-			"Nav to file 4",
-		},
-	},
-}
 
 return M
