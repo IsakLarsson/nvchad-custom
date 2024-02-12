@@ -3,7 +3,7 @@ local M = {}
 M.disabled = {
 	n = {
 		["<A-i>"] = "",
-		-- ["gr"] = "",
+		["gr"] = "",
 		["gi"] = "",
 		["<leader>h"] = "",
 		["<leader>ma"] = "",
@@ -131,7 +131,7 @@ M.custom = {
 M.telescope = {
 	n = {
 		["gf"] = {
-			"<cmd>Telescope lsp_references theme=ivy<cr>",
+			"<cmd>Telescope lsp_references theme=ivy initial_mode=normal<cr>",
 			"Show all lsp references in telescope",
 		},
 		["<leader>ft"] = {
