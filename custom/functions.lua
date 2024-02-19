@@ -3,9 +3,7 @@ local group = api.nvim_create_augroup("internal.autocmd", {})
 
 api.nvim_create_autocmd("VimEnter", {
 	callback = function()
-		if vim.fn.argv(0) == "" then
-			require("telescope.builtin").find_files()
-		end
+		if vim.fn.argv(0) == "" then require("telescope.builtin").find_files() end
 	end,
 })
 
@@ -14,9 +12,7 @@ api.nvim_command("command ReloadApp :silent !tmux send-keys -t app:2 'r'")
 api.nvim_create_autocmd("BufEnter", {
 	pattern = ".env**",
 	group = group,
-	callback = function(args)
-		vim.diagnostic.disable(args.buf)
-	end,
+	callback = function(args) vim.diagnostic.disable(args.buf) end,
 })
 
 function CloseAllBuffersExceptCurrent()
@@ -24,10 +20,9 @@ function CloseAllBuffersExceptCurrent()
 	local buffers = api.nvim_list_bufs()
 
 	for _, buf in ipairs(buffers) do
-		if api.nvim_buf_is_loaded(buf) and buf ~= current_buffer then
-			api.nvim_buf_delete(buf, {})
-		end
+		if api.nvim_buf_is_loaded(buf) and buf ~= current_buffer then api.nvim_buf_delete(buf, {}) end
 	end
+	vim.notify("Buffers closed!", 2)
 end
 api.nvim_create_user_command("CloseOtherBuffers", CloseAllBuffersExceptCurrent, {})
 
