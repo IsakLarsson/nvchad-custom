@@ -34,15 +34,12 @@ local plugins = {
 		"theprimeagen/harpoon",
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("harpoon"):setup()
-		end,
+		config = function() require("harpoon"):setup() end,
+		event = "VeryLazy",
 		keys = {
 			{
-				"<leader>A",
-				function()
-					require("harpoon"):list():append()
-				end,
+				"<leader>ha",
+				function() require("harpoon"):list():append() end,
 				desc = "harpoon file",
 			},
 			{
@@ -55,30 +52,22 @@ local plugins = {
 			},
 			{
 				"<leader>n",
-				function()
-					require("harpoon"):list():select(1)
-				end,
+				function() require("harpoon"):list():select(1) end,
 				desc = "harpoon to file 1",
 			},
 			{
 				"<leader>e",
-				function()
-					require("harpoon"):list():select(2)
-				end,
+				function() require("harpoon"):list():select(2) end,
 				desc = "harpoon to file 2",
 			},
 			{
 				"<leader>i",
-				function()
-					require("harpoon"):list():select(3)
-				end,
+				function() require("harpoon"):list():select(3) end,
 				desc = "harpoon to file 3",
 			},
 			{
 				"<leader>o",
-				function()
-					require("harpoon"):list():select(4)
-				end,
+				function() require("harpoon"):list():select(4) end,
 				desc = "harpoon to file 4",
 			},
 		},
@@ -126,16 +115,12 @@ local plugins = {
 	{
 		"kylechui/nvim-surround",
 		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
+		config = function() require("nvim-surround").setup({}) end,
 	},
 	{
 		"windwp/nvim-ts-autotag",
 		ft = { "typescriptreact", "html", "javascriptreact" },
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
+		config = function() require("nvim-ts-autotag").setup() end,
 	},
 	{
 		"numToStr/Comment.nvim",
@@ -188,41 +173,31 @@ local plugins = {
 			{
 				"s",
 				mode = { "n", "x", "o" },
-				function()
-					require("flash").jump()
-				end,
+				function() require("flash").jump() end,
 				desc = "Flash",
 			},
 			{
 				"S",
 				mode = { "n", "x", "o" },
-				function()
-					require("flash").treesitter()
-				end,
+				function() require("flash").treesitter() end,
 				desc = "Flash Treesitter",
 			},
 			{
 				"r",
 				mode = "o",
-				function()
-					require("flash").remote()
-				end,
+				function() require("flash").remote() end,
 				desc = "Remote Flash",
 			},
 			{
 				"R",
 				mode = { "o", "x" },
-				function()
-					require("flash").treesitter_search()
-				end,
+				function() require("flash").treesitter_search() end,
 				desc = "Treesitter Search",
 			},
 			{
 				"<c-t>",
 				mode = { "c" },
-				function()
-					require("flash").toggle()
-				end,
+				function() require("flash").toggle() end,
 				desc = "Toggle Flash Search",
 			},
 		},
@@ -232,9 +207,7 @@ local plugins = {
 
 		dependencies = {
 			"nvimtools/none-ls.nvim",
-			config = function()
-				require("custom.configs.null-ls")
-			end,
+			config = function() require("custom.configs.null-ls") end,
 		},
 
 		config = function()
