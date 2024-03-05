@@ -33,6 +33,7 @@ M.git = {
 		},
 	},
 }
+
 M.custom = {
 	n = {
 		["<C-u>"] = {
@@ -68,9 +69,7 @@ M.custom = {
 			"Goto next find character",
 		},
 		["<leader>;"] = {
-			function()
-				require("nvterm.terminal").toggle("float")
-			end,
+			function() require("nvterm.terminal").toggle("float") end,
 			"Open floating terminal",
 		},
 		["<leader>q"] = {
@@ -114,16 +113,12 @@ M.custom = {
 	t = {
 
 		["†"] = {
-			function()
-				require("nvterm.terminal").toggle("horizontal")
-			end,
+			function() require("nvterm.terminal").toggle("horizontal") end,
 			"Toggle horizontal term",
 		},
 
 		["‹"] = {
-			function()
-				require("nvterm.terminal").toggle("vertical")
-			end,
+			function() require("nvterm.terminal").toggle("vertical") end,
 			"Toggle vertical term",
 		},
 	},
@@ -156,16 +151,12 @@ M.diagnostics = {
 	n = {
 
 		["<leader>fd"] = {
-			function()
-				vim.diagnostic.open_float({ border = "rounded" })
-			end,
+			function() vim.diagnostic.open_float({ border = "rounded" }) end,
 			"Floating diagnostic",
 		},
 
 		["]d"] = {
-			function()
-				vim.diagnostic.goto_next({ float = { border = "rounded" } })
-			end,
+			function() vim.diagnostic.goto_next({ float = { border = "rounded" } }) end,
 			"Goto next",
 		},
 		["<leader>da"] = {
