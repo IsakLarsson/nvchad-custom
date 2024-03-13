@@ -25,9 +25,41 @@ local plugins = {
 		end,
 	},
 	{
-		"inkarkat/vim-ReplaceWithRegister",
+		"gbprod/substitute.nvim",
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
 		keys = {
-			"gr",
+			{
+				"s",
+				mode = "n",
+				function() require("substitute").operator() end,
+				desc = "Substitute",
+			},
+			{
+				"ss",
+				mode = "n",
+				function() require("substitute").line() end,
+				desc = "Substitute Line",
+			},
+			{
+				"S",
+				mode = "n",
+				function() require("substitute").eol() end,
+				desc = "Substitute Line",
+			},
+			{
+				"sx",
+				mode = "n",
+				function() require("substitute.exchange").operator() end,
+			},
+			{
+				"sxx",
+				mode = "n",
+				function() require("substitute.exchange").line() end,
+			},
 		},
 	},
 	{
@@ -186,13 +218,13 @@ local plugins = {
 		},
 		keys = {
 			{
-				"s",
+				"<leader>s",
 				mode = { "n", "x", "o" },
 				function() require("flash").jump() end,
 				desc = "Flash",
 			},
 			{
-				"S",
+				"<leader>S",
 				mode = { "n", "x", "o" },
 				function() require("flash").treesitter() end,
 				desc = "Flash Treesitter",
