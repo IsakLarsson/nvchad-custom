@@ -25,6 +25,27 @@ local plugins = {
 		end,
 	},
 	{
+		"nvim-pack/nvim-spectre",
+		config = function() require("spectre").setup() end,
+		keys = {
+			{
+				"<leader>SP",
+				function() require("spectre").toggle() end,
+				desc = "Spectre",
+			},
+			{
+				"<leader>SW",
+				function() require("spectre").open_visual({ select_word = true }) end,
+				desc = "Spectre",
+			},
+			{
+				"<leader>SF",
+				function() require("spectre").open_file_search({ select_word = true }) end,
+				desc = "Spectre",
+			},
+		},
+	},
+	{
 		"gbprod/substitute.nvim",
 		opts = {
 			-- your configuration comes here

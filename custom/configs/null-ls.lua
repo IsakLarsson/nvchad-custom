@@ -10,7 +10,7 @@ local sources = {
 	formatting.gofmt,
 	formatting.rustfmt,
 	formatting.elm_format,
-	diagnostics.eslint,
+	-- diagnostics.eslint,
 	code_actions.eslint,
 	formatting.biome,
 }
@@ -28,9 +28,7 @@ null_ls.setup({
 				callback = function()
 					vim.lsp.buf.format({
 						bufnr = bufnr,
-						filter = function(client)
-							return client.name == "null-ls"
-						end,
+						filter = function(client) return client.name == "null-ls" end,
 					})
 				end,
 			})
