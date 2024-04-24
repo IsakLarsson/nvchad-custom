@@ -8,10 +8,11 @@ local sources = {
 	-- formatting.prettier,
 	formatting.stylua,
 	formatting.gofmt,
-	formatting.rustfmt,
+	-- formatting.rustfmt,
 	formatting.elm_format,
+	code_actions.refactoring,
 	-- diagnostics.eslint,
-	code_actions.eslint,
+	-- code_actions.eslint,
 	formatting.biome,
 }
 

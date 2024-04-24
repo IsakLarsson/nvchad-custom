@@ -25,6 +25,52 @@ local plugins = {
 		end,
 	},
 	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		lazy = true,
+		config = function()
+			require("nvim-treesitter.configs").setup({
+				textobjects = {
+					select = {
+						enable = true,
+						lookahead = true,
+						keymaps = {
+							["af"] = "@function.outer",
+							["if"] = "@function.inner",
+							["ac"] = "@conditional.outer",
+							["ic"] = "@conditional.inner",
+							["ie"] = "@comment.inner",
+							["l="] = "@assignment.lhs",
+							["r="] = "@assignment.rhs",
+							["a="] = "@assignment.outer",
+						},
+					},
+					swap = {
+						enable = true,
+						swap_next = {
+							["<leader>na"] = "@parameter.inner",
+						},
+						swap_previous = {
+							["<leader>pa"] = "@parameter.inner",
+						},
+					},
+					goto_next_start = {
+						["]n"] = "@function.outer",
+					},
+					goto_previous_start = {
+						["[n"] = "@function.outer",
+					},
+
+					lsp_interop = {
+						enable = true,
+						peek_definition_code = {
+							["<leader>p"] = "@function.outer",
+						},
+					},
+				},
+			})
+		end,
+	},
+	{
 		"nvim-pack/nvim-spectre",
 		config = function() require("spectre").setup() end,
 		keys = {
@@ -69,7 +115,7 @@ local plugins = {
 				"S",
 				mode = "n",
 				function() require("substitute").eol() end,
-				desc = "Substitute Line",
+				desc = "Substitute to end of line",
 			},
 			{
 				"sx",
@@ -204,22 +250,17 @@ local plugins = {
 		lazy = false,
 	},
 	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("plugins.configs.lspconfig")
-			require("custom.configs.lspconfig")
-		end,
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
+		event = {
+			"BufReadPre",
+			"BufNewFile",
+		},
 		dependencies = {
 			"JoosepAlviste/nvim-ts-context-commentstring",
+			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 		opts = {
 			auto_install = true,
-		},
-		context_commentstring = {
-			enable = true,
 		},
 	},
 	{
@@ -278,10 +319,7 @@ local plugins = {
 			config = function() require("custom.configs.null-ls") end,
 		},
 
-		config = function()
-			require("plugins.configs.lspconfig")
-			require("custom.configs.lspconfig")
-		end,
+		config = function() require("custom.configs.lspconfig") end,
 	},
 	{
 		"christoomey/vim-tmux-navigator",
