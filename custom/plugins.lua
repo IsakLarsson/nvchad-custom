@@ -163,7 +163,7 @@ local plugins = {
 		keys = {
 			{
 				"<leader>ha",
-				function() require("harpoon"):list():append() end,
+				function() require("harpoon"):list():add() end,
 				desc = "harpoon file",
 			},
 			{
