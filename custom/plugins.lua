@@ -47,10 +47,12 @@ local plugins = {
 					swap = {
 						enable = true,
 						swap_next = {
-							["<leader>na"] = "@parameter.inner",
+							["<leader>pn"] = "@parameter.inner",
+							["<leader>cn"] = "@conditional.inner",
 						},
 						swap_previous = {
-							["<leader>pa"] = "@parameter.inner",
+							["<leader>pp"] = "@parameter.inner",
+							["<leader>cp"] = "@conditional.inner",
 						},
 					},
 					goto_next_start = {
@@ -94,9 +96,9 @@ local plugins = {
 	{
 		"gbprod/substitute.nvim",
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
+			highlight_substituted_text = {
+				timer = 50,
+			},
 		},
 		keys = {
 			{
