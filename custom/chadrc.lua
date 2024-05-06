@@ -20,6 +20,10 @@ M.ui = {
 	tabufline = {
 		enabled = false,
 	},
+	hl_override = {
+		TelescopeSelection = { bg = "vibrant_green", fg = "black" },
+		Visual = { bg = "vibrant_green", fg = "black" },
+	},
 }
 M.plugins = "custom.plugins"
 M.mappings = require("custom.mappings")
@@ -28,6 +32,7 @@ M.mappings = require("custom.mappings")
 for i = 1, 9, 1 do
 	vim.keymap.set("n", string.format("<A-%s>", i), function() vim.api.nvim_set_current_buf(vim.t.bufs[i]) end)
 end
+--treesitter textobjects
 local links = {
 	["@lsp.type.namespace"] = "@namespace",
 	["@lsp.type.type"] = "@type",
