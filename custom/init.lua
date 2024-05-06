@@ -2,7 +2,8 @@ require("custom.functions")
 
 local opt = vim.opt -- for conciseness
 vim.keymap.set("n", "U", "<C-r>") --Redo
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "red" })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "yellow" })
 opt.confirm = true
 opt.scrolloff = 10
 opt.relativenumber = true
