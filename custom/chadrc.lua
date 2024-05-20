@@ -21,7 +21,7 @@ M.ui = {
 		enabled = false,
 	},
 	hl_override = {
-		TelescopeSelection = { bg = "nord_blue", fg = "one_bg" },
+		TelescopeSelection = { bg = "blue", fg = "one_bg" },
 		TelescopeResultsTitle = { bg = "NONE", fg = "nord_blue" },
 		TelescopePromptTitle = { bg = "NONE", fg = "vibrant_green" },
 		TelescopePreviewTitle = { bg = "NONE", fg = "dark_purple" },
