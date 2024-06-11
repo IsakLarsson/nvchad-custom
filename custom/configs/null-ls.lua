@@ -14,6 +14,7 @@ local sources = {
 	-- diagnostics.eslint,
 	-- code_actions.eslint,
 	formatting.biome,
+	formatting.gleam_format,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

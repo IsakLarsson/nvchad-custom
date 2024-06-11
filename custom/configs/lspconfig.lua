@@ -13,6 +13,7 @@ local servers = {
 	"groovyls",
 	"yamlls",
 	"biome",
+	"gleam",
 }
 
 for _, lsp in ipairs(servers) do
