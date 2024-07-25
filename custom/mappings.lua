@@ -137,6 +137,10 @@ M.telescope = {
 			"<cmd>:Telescope resume<cr>",
 			"Resume last Telescope search",
 		},
+		["<leader>fs"] = {
+			"<cmd>:Telescope grep_string<cr>",
+			"Telescope the word under the cursor",
+		},
 	},
 }
 M.tmux = {

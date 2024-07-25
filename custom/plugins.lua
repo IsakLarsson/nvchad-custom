@@ -15,6 +15,9 @@ local plugins = {
 		},
 		config = function() require("refactoring").setup() end,
 	},
+	{ "tpope/vim-fugitive", event = {
+		"VeryLazy",
+	} },
 	{
 		"NvChad/nvterm",
 		config = function()
