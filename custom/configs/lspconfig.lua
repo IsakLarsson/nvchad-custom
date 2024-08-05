@@ -13,6 +13,7 @@ local servers = {
 	"groovyls",
 	"yamlls",
 	"biome",
+	"intelephense",
 	"gleam",
 	"gopls",
 }
