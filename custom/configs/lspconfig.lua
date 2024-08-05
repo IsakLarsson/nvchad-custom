@@ -14,6 +14,7 @@ local servers = {
 	"yamlls",
 	"biome",
 	"gleam",
+	"gopls",
 }
 
 for _, lsp in ipairs(servers) do
