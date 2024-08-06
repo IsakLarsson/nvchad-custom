@@ -7,6 +7,7 @@ M.disabled = {
 		["gi"] = "",
 		["<leader>h"] = "",
 		["<leader>ma"] = "",
+		["<leader>gb"] = "",
 	},
 	i = {
 
@@ -30,6 +31,10 @@ M.git = {
 		["<leader>gp"] = {
 			"<cmd>!git push<cr>",
 			"Git push",
+		},
+		["<leader>gb"] = {
+			"<cmd>Gitsigns blame<cr>",
+			"Git blame file",
 		},
 	},
 }
