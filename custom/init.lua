@@ -7,6 +7,8 @@ vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "yell
 opt.confirm = true
 opt.scrolloff = 10
 opt.relativenumber = true
+opt.hlsearch = true
+
 -- tabs & indentation
 -- opt.tabstop = 4
 -- opt.shiftwidth = 4
@@ -18,7 +20,6 @@ opt.relativenumber = true
 
 -- search settins
 opt.incsearch = true
-opt.hlsearch = false
 -- cursor line
 opt.cursorline = true
 -- appearance
