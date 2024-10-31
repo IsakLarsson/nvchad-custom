@@ -146,6 +146,10 @@ M.telescope = {
 			"<cmd>:Telescope grep_string<cr>",
 			"Telescope the word under the cursor",
 		},
+		["<leader>fg"] = {
+			"<cmd>:Telescope lsp_document_symbols<cr>",
+			"Telescop LSP symbols",
+		},
 	},
 }
 M.tmux = {
