@@ -36,6 +36,10 @@ local plugins = {
 		end,
 	},
 	{
+		"hiphhish/rainbow-delimiters.nvim",
+		event = "BufEnter",
+	},
+	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		lazy = true,
 		config = function()
@@ -153,6 +157,9 @@ local plugins = {
 					keymap = {
 						accept = "<C-t>",
 					},
+				},
+				filetypes = {
+					gleam = false,
 				},
 			})
 		end,
@@ -286,9 +293,12 @@ local plugins = {
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		opts = {
-			modes = { search = { enabled = false }, char = { multi_line = false, highlight = { backdrop = false } } },
+			modes = {
+				search = { enabled = false },
+				char = { multi_line = false, highlight = { backdrop = false } },
+			},
 			highlight = {
-				backdrop = false,
+				backdrop = true,
 			},
 		},
 		keys = {
