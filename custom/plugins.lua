@@ -36,7 +36,7 @@ local plugins = {
 		end,
 	},
 	{
-		"hiphhish/rainbow-delimiters.nvim",
+		"hiphish/rainbow-delimiters.nvim",
 		event = "BufEnter",
 	},
 	{
