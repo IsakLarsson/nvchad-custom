@@ -44,3 +44,5 @@ local function invert_boolean()
 	vim.cmd("normal! ciw" .. bool_table[word])
 end
 api.nvim_create_user_command("InvertBoolean", invert_boolean, {})
+
+api.nvim_command("command Gmod !Git merge origin development")
