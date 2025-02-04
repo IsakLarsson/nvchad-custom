@@ -12,7 +12,7 @@ M.ui = {
 		},
 	},
 	statusline = {
-		theme = "vscode_colored",
+		theme = "minimal",
 	},
 	cmp = {
 		selected_item_bg = "colored",
@@ -25,7 +25,7 @@ M.ui = {
 		TelescopeResultsTitle = { bg = "NONE", fg = "everforest_blue" },
 		TelescopePromptTitle = { bg = "NONE", fg = "vibrant_green" },
 		TelescopePreviewTitle = { bg = "NONE", fg = "dark_purple" },
-		Visual = { bg = "vibrant_green", fg = "one_bg" },
+		Visual = { bg = "sun", fg = "one_bg" },
 	},
 }
 M.plugins = "custom.plugins"
