@@ -1,9 +1,19 @@
 local api = vim.api
 local group = api.nvim_create_augroup("internal.autocmd", {})
 
+-- api.nvim_create_autocmd("VimEnter", {
+-- 	callback = function()
+-- 		local bufname = vim.api.nvim_buf_get_name(0)
+-- 		print("buf:", bufname == "")
+-- 		if bufname == "" then require("telescope.builtin").find_files() end
+-- 	end,
+-- })
 api.nvim_create_autocmd("VimEnter", {
 	callback = function()
-		if vim.fn.argv(0) == "" then require("telescope.builtin").find_files() end
+		vim.schedule(function()
+			local mark = vim.fn.line("'0")
+			if mark > 0 then vim.cmd("normal! g`0") end
+		end)
 	end,
 })
 
