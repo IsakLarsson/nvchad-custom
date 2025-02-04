@@ -8,14 +8,6 @@ local group = api.nvim_create_augroup("internal.autocmd", {})
 -- 		if bufname == "" then require("telescope.builtin").find_files() end
 -- 	end,
 -- })
-api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		vim.schedule(function()
-			local mark = vim.fn.line("'0")
-			if mark > 0 then vim.cmd("normal! g`0") end
-		end)
-	end,
-})
 
 api.nvim_command("command ReloadApp :silent !tmux send-keys -t app:2 'r'")
 
