@@ -16,6 +16,8 @@ local servers = {
 	"gleam",
 	"gopls",
 	"clojure_lsp",
+	"purescriptls",
+	"clangd",
 }
 
 for _, lsp in ipairs(servers) do
