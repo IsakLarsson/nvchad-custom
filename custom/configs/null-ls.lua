@@ -11,10 +11,10 @@ local sources = {
 	-- formatting.rustfmt,
 	formatting.elm_format,
 	code_actions.refactoring,
-	-- diagnostics.eslint,
-	-- code_actions.eslint,
 	formatting.biome,
 	formatting.gleam_format,
+	formatting.black,
+	formatting.clang_format,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
