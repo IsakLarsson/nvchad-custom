@@ -13,6 +13,7 @@ local sources = {
 	code_actions.refactoring,
 	formatting.biome,
 	formatting.gleam_format,
+	formatting.purs_tidy,
 	formatting.black,
 	formatting.clang_format,
 }

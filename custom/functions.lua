@@ -1,11 +1,13 @@
 local api = vim.api
 local group = api.nvim_create_augroup("internal.autocmd", {})
 
-api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		if vim.fn.argv(0) == "" then require("telescope.builtin").find_files() end
-	end,
-})
+-- api.nvim_create_autocmd("VimEnter", {
+-- 	callback = function()
+-- 		local bufname = vim.api.nvim_buf_get_name(0)
+-- 		print("buf:", bufname == "")
+-- 		if bufname == "" then require("telescope.builtin").find_files() end
+-- 	end,
+-- })
 
 api.nvim_command("command ReloadApp :silent !tmux send-keys -t app:2 'r'")
 
@@ -44,3 +46,5 @@ local function invert_boolean()
 	vim.cmd("normal! ciw" .. bool_table[word])
 end
 api.nvim_create_user_command("InvertBoolean", invert_boolean, {})
+
+api.nvim_command("command Gmod !Git merge origin development")
