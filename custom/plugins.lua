@@ -15,6 +15,17 @@ local plugins = {
 		},
 		config = function() require("refactoring").setup() end,
 	},
+	{
+		"tpope/vim-unimpaired",
+		event = "BufEnter",
+	},
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+		event = "BufEnter",
+		config = function() require("fzf-lua").setup({ "ivy" }) end,
+	},
 	{ "tpope/vim-fugitive", event = {
 		"VeryLazy",
 	} },

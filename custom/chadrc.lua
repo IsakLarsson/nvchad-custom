@@ -12,7 +12,7 @@ M.ui = {
 		},
 	},
 	statusline = {
-		theme = "minimal",
+		theme = "vscode_colored",
 	},
 	cmp = {
 		selected_item_bg = "colored",

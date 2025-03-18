@@ -101,6 +101,10 @@ M.custom = {
 			"<cmd>:LspRestart<CR>",
 			"Lsp Restart",
 		},
+		["<leader>ca"] = {
+			"<cmd>:FzfLua lsp_code_actions<CR>",
+			"Lsp code actions fzf",
+		},
 	},
 
 	i = {
@@ -139,16 +143,28 @@ M.telescope = {
 			"Open Telescope file browser",
 		},
 		["<leader>fr"] = {
-			"<cmd>:Telescope resume<cr>",
-			"Resume last Telescope search",
+			"<cmd>:FzfLua resume<cr>",
+			"Resume last FzfLua search",
 		},
 		["<leader>fs"] = {
 			"<cmd>:Telescope grep_string<cr>",
 			"Telescope the word under the cursor",
 		},
 		["<leader>fg"] = {
-			"<cmd>:Telescope lsp_document_symbols<cr>",
-			"Telescop LSP symbols",
+			"<cmd>:FzfLua lsp_document_symbols<cr>",
+			"FzfLua LSP symbols",
+		},
+		["<leader>ff"] = {
+			"<cmd>:FzfLua files<cr>",
+			"FzfLua files",
+		},
+		["<leader>fw"] = {
+			"<cmd>:Telescope live_grep<cr>",
+			"Telescope live_grep",
+		},
+		["<leader>fi"] = {
+			"<cmd>:FzfLua lgrep_curbuf<cr>",
+			"FzfLua grep current buffer",
 		},
 	},
 }
