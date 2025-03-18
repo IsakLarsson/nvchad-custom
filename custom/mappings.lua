@@ -112,6 +112,18 @@ M.custom = {
 			"()=>{}<esc>i",
 			"arrow function",
 		},
+		["§"] = {
+			"<",
+			"arrow left",
+		},
+		["°"] = {
+			">",
+			"arrow right",
+		},
+		["ä"] = {
+			"->",
+			"arrow",
+		},
 	},
 
 	v = {

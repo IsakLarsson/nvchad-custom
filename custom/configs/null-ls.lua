@@ -11,8 +11,6 @@ local sources = {
 	-- formatting.rustfmt,
 	formatting.elm_format,
 	code_actions.refactoring,
-	-- diagnostics.eslint,
-	-- code_actions.eslint,
 	formatting.biome,
 	formatting.gleam_format,
 	formatting.purs_tidy,
